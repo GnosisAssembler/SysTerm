@@ -1,8 +1,8 @@
 # SysTerm
 
-> Harware tracking node js cli
+> 🧰 Harware tracking node js cli
 
-![status in_progress](https://img.shields.io/badge/status-in_progress-brightgreen.svg)
+![status in_progress](https://img.shields.io/badge/status-in_progress-brightgreen.svg?style=flat-square)
 
 ## License
 
