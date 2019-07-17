@@ -4,14 +4,19 @@
   "description": "Cli with system info",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js",
-    "dev":"nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "pan karyp",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
     "express": "^4.16.4",
+    "figlet": "^1.2.3",
+    "inquirer": "^6.5.0",
+    "ora": "^3.4.0",
     "systeminformation": "^3.50.3"
   }
 }
