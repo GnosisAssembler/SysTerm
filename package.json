@@ -1,15 +1,24 @@
 {
   "name": "systerm",
   "version": "1.0.0",
-  "description": "Cli with system info",
-  "main": "app.js",
+  "description": "Hardware tracking node.js cli",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankaryp/SysTerm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pankaryp/SysTerm/issues"
+  },
+  "homepage": "https://github.com/pankaryp/SysTerm#readme",
   "author": "pan karyp",
   "license": "MIT",
   "dependencies": {
+    "blessed": "^0.1.81",
     "body-parser": "^1.18.3",
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
@@ -17,6 +26,8 @@
     "figlet": "^1.2.3",
     "inquirer": "^6.5.0",
     "ora": "^3.4.0",
+    "react": "^16.8.6",
+    "react-blessed": "^0.6.1",
     "systeminformation": "^3.50.3"
   },
   "devDependencies": {
