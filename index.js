@@ -2,18 +2,19 @@ var blessed = require('blessed');
 
 // Create a screen object.
 var screen = blessed.screen({
-  smartCSR: true
-});
+    smartCSR: true,
+    dockBorders : true
+  });
 
-screen.title = 'my window title';
+screen.title = 'SysTerm - System Information';
 
-// Create a box perfectly centered horizontally and vertically.
+// Create a box 
 var box = blessed.box({
-  top: 'center',
-  left: 'center',
+  top: '0%',
+  left: '0%',
   width: '50%',
   height: '50%',
-  content: 'Hello {bold}world{/bold}!',
+  content: 'Test',
   tags: true,
   border: {
     type: 'line'
@@ -25,13 +26,82 @@ var box = blessed.box({
       fg: '#f0f0f0'
     },
     hover: {
-      bg: 'green'
+      bg: 'cyan'
     }
   }
 });
 
+var table = blessed.table({
+    top: '0%',
+    left: '50%',
+    width: '50%',
+    height: '50%',
+
+    data: [
+        ['test', 'test', 'test'],
+        ['test', 'test', 'test'],
+        ['test', 'test', 'test']
+    ],
+    
+    border: {
+      type: 'line'
+    },
+    style: {
+      fg: 'white',
+      bg: 'magenta',
+      border: {
+        fg: '#f0f0f0'
+      }
+    }
+  });
+
+  var list = blessed.list({
+    top: '50%',
+    left: '0%',
+    width: '50%',
+    height: '50%',
+    
+    items: ['gnome','gnome','gnome','gnome','gnome'],
+
+    border: {
+      type: 'line'
+    },
+    style: {
+      fg: 'white',
+      border: {
+        fg: '#f0f0f0'
+      }
+    }
+  });
+
+  var box4 = blessed.progressBar({
+    top: '50%',
+    left: '50%',
+    width: '50%',
+    height: '50%',
+    content: 'Test',
+    tags: true,
+    border: {
+      type: 'line'
+    },
+    style: {
+      fg: 'white',
+      bg: 'magenta',
+      border: {
+        fg: '#f0f0f0'
+      },
+      hover: {
+        bg: 'cyan'
+      }
+    }
+  });
+
+
 // Append our box to the screen.
 screen.append(box);
+screen.append(table);
+screen.append(list);
+screen.append(box4);
 
 // Add a png icon to the box
 var icon = blessed.image({
