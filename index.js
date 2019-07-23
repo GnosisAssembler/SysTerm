@@ -74,7 +74,7 @@ var table = blessed.table({
     }
   });
 
-  var box4 = blessed.progressBar({
+  var box4 = blessed.box({
     top: '50%',
     left: '50%',
     width: '50%',
