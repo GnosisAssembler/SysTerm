@@ -27,7 +27,7 @@
     "ora": "^3.4.0",
     "react": "^16.8.6",
     "react-blessed": "^0.6.1",
-    "systeminformation": "^3.50.3"
+    "systeminformation": "^5.3.1"
   },
   "devDependencies": {
     "winston": "^3.2.1"
