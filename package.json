@@ -1,25 +1,43 @@
 {
   "name": "systerm",
   "version": "1.0.0",
-  "description": "Cli with system info",
-  "main": "app.js",
+  "description": "A small TypeScript framework for data-rich terminal UIs, with a system monitor.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "systerm": "./dist/monitor/main.js"
+  },
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "tsx src/monitor/main.ts",
+    "dev": "tsx watch src/monitor/main.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "example": "tsx examples/hello.ts"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "author": "pan karyp",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "chalk": "^2.4.2",
-    "commander": "^2.20.0",
-    "express": "^4.16.4",
-    "figlet": "^1.2.3",
-    "inquirer": "^6.5.0",
-    "ora": "^3.4.0",
-    "systeminformation": "^3.50.3"
+    "figlet": "^1.8.2",
+    "pngjs": "^7.0.0",
+    "string-width": "^7.2.0",
+    "systeminformation": "^5.27.11"
   },
   "devDependencies": {
-    "winston": "^3.2.1"
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.15.3",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   }
 }
